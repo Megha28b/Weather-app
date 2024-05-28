@@ -9,7 +9,7 @@ const WeatherCard = () => {
   useEffect(() => {
     const ApiCall = async () => {
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${searchbar}&units=metric&appid=64090de8dd360064fbfdb72a7631620e`
+        `https://api.openweathermap.org/data/2.5/weather?q=${searchbar}&units=metric&appid=${your_api_key}`
       );
       const result = await response.json();
       setPlace(result.main);
